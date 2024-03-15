@@ -15,7 +15,7 @@ const Card = ({ product, handleAddedCardProducts }) => {
             <div className=" my-4 flex items-center justify-between">
                 <p className=" text-2xl font-semibold">{category}</p>
                 <button onClick={() => handleAddedCardProducts(product)} className='py-4 px-6 bg-blue-600 text-white font-bold rounded-2xl '>Add Cart</button>
-                <p className="font-bold text-2xl">{price} Price</p>
+                <p className="font-semibold text-2xl">{price} Price</p>
             </div>
         </div>
     );
