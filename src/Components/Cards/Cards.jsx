@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
+import PropTypes from 'prop-types'; // ES6
 
-const Cards = () => {
+const Cards = ({ handleAddedCardProducts }) => {
 
     // useState for hold data
     const [products, setProducts] = useState([]);
@@ -20,11 +21,21 @@ const Cards = () => {
 
             <div>
                 {
-                    products.map(product => <Card key={product.id} product={product}></Card>)
+                    products.map(product => <Card
+                        key={product.id}
+                        product={product}
+                        handleAddedCardProducts={handleAddedCardProducts}
+                    ></Card>)
                 }
             </div>
         </div>
     );
 };
 
+
+Cards.propTypes = {
+    // handleMark: PropTypes.func,
+
+    // handleMarkAsReading: PropTypes.func
+}
 export default Cards;
